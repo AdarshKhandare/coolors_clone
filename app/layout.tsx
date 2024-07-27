@@ -1,14 +1,9 @@
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
-
-import { cn } from "@/lib/utils";
+import { Inter as FontSans, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -19,11 +14,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            "min-h-screen min-w-min overflow-hidden  bg-background font-sans antialiased",
-            fontSans.variable
-          )}>
+        <body className={inter.className}>
           <Navbar />
           {children}
         </body>
