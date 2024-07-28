@@ -42,7 +42,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex  lg:flex-row flex-col-reverse  items-center justify-between  lg:py-14">
+    <main className="flex  lg:flex-row  flex-col-reverse  items-center justify-around   lg:p-24">
       {/* <Settings /> */}
 
       <motion.div
