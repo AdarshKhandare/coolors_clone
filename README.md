@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foobar
 
-## Getting Started
+Foobar is a Python library for dealing with word pluralization.
 
-First, run the development server:
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pip install foobar
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Coolors.co Clone
+This is a clone of the popular color palette generator [Coolors.co](https://coolors.co/) built using Next.js, TailwindCSS, Framer Motion, and TypeScript. The project is deployed on Vercel.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##   [Demo](https://coolors-clone-dun.vercel.app)
+Check out the live demo of the project [here](https://coolors-clone-dun.vercel.app).
 
-## Learn More
+# Features
+* Generate color palettes
+* Smooth animations with Framer Motion
+* Responsive design with TailwindCSS
+* Fast and optimized with Next.js
 
-To learn more about Next.js, take a look at the following resources:
+# Technologies Used
+* [Next.js](https://nextjs.org/) - The React Framework
+* [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+* [Framer Motion](https://www.framer.com/motion/) - Library for animations
+* [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Installation
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+Copy code
+git clone https://github.com/AdarshKhandare/coolors_clone.git
+cd coolors-clone
+```
+2. Install dependencies:
 
-## Deploy on Vercel
+```
+bash
+Copy code
+npm install
+```
+3. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+Copy code
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open http://localhost:3000 with your browser to see the result.
+
+# Usage
+* Click on the "Generate" button to create a new color palette.
+* Click on individual colors to lock them in place while generating new palettes.
+* Copy color codes by clicking on them.
+* Export the palettes using URL or download using PDF, SVG, IMAGE format.
+
+
+# Acknowledgements
+[Coolors.co](https://coolors.co/) for the inspiration.
+Next.js, TailwindCSS, Framer Motion, and TypeScript for the awesome tools.
