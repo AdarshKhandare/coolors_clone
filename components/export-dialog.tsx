@@ -75,7 +75,7 @@ export function ExportDialog({
           <Share2Icon className="mr-2 w-[18px]" />
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="sm:max-w-[425px] p-2">
+      <DrawerContent className="sm:max-w-[500px] p-2">
         <DrawerHeader className="">
           <DialogTitle className="text-left">Export Palette</DialogTitle>
         </DrawerHeader>

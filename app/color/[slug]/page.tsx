@@ -15,7 +15,6 @@ import randomColor from "randomcolor";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { usePDF } from "react-to-pdf";
-import SavedPalettes from "@/components/saved-palettes";
 import { MenuIcon, MenuSquare } from "lucide-react";
 import Palette from "@/components/Palette";
 extend([namesPlugin]);
@@ -85,15 +84,15 @@ export default function Page({
     page: { orientation: "landscape", format: "a5" },
   });
 
-  useEffect(() => {
-    animate(
-      ".menuicon",
+  // useEffect(() => {
+  //   animate(
+  //     ".menuicon",
 
-      {
-        rotate: showSavedPalettes ? 90 : 0,
-      }
-    );
-  }, [showSavedPalettes]);
+  //     {
+  //       rotate: showSavedPalettes ? 90 : 0,
+  //     }
+  //   );
+  // }, [showSavedPalettes]);
 
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -120,18 +119,18 @@ export default function Page({
         <div className="flex items-center gap-2">
           <ViewDialog colors={colors} />
 
-          <SaveDialog colors={colors} />
+          {/* <SaveDialog colors={colors} /> */}
 
           <ExportDialog targetRef={targetRef} handleExportPdf={toPDF} />
 
-          <Button className="border-none " variant={"outline"}>
+          {/* <Button className="border-none " variant={"outline"}>
             <MenuIcon
               className="menuicon hover:text-purple-500"
               onClick={() => {
                 setShowSavedPalettes(!showSavedPalettes);
               }}
             />
-          </Button>
+          </Button> */}
         </div>
       </div>
 
@@ -152,10 +151,6 @@ export default function Page({
               colors={colors}
             />
           ))}
-
-          {showSavedPalettes ? (
-            <SavedPalettes setShowSavedPalettes={setShowSavedPalettes} />
-          ) : null}
         </Reorder.Group>
       </div>
     </div>

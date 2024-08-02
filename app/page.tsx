@@ -1,6 +1,5 @@
 "use client";
 import Settings from "@/components/Settings";
-import { useSession } from "@clerk/nextjs";
 import Image from "next/image";
 import { motion, useAnimate } from "framer-motion";
 import { BLUR_BUTTON_VARIANT, FADE_DOWN_ANIMATION_VARIANTS } from "@/variant";
@@ -8,8 +7,6 @@ import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  const { isSignedIn, isLoaded } = useSession();
-
   const [scope, animate] = useAnimate();
 
   const getRandomColor = () => {
@@ -17,9 +14,15 @@ export default function Home() {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   };
 
-  const animateWithRandomColors = async (target: string) => {
+  /**
+   * Animates the specified target element with a random color.
+   *
+   * @param {string} target - The CSS selector of the target element.
+   * @return {Promise<void>} A promise that resolves when the animation is complete.
+   */
+  const animateWithRandomColors = async (target: string): Promise<void> => {
     while (true) {
-      const color = getRandomColor(); // Generate a random color
+      const color: string = getRandomColor(); // Generate a random color
       await animate(
         target,
         {
@@ -92,7 +95,7 @@ export default function Home() {
             animate="visible"
             transition={{ duration: 1, delay: 0.8 }}
             variants={BLUR_BUTTON_VARIANT}
-            className="text-black w-full  border border-[#d8d8da] font-semibold h-[46px] px-[21px] my-3 rounded-lg whitespace-nowrap">
+            className="text-black w-full  border border-[#d8d8da] font-semibold h-[46px] px-[21px] my-3 rounded-lg whitespace-nowrap cursor-not-allowed">
             Explore trending palettes
           </motion.button>
         </div>

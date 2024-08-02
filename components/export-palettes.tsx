@@ -69,31 +69,31 @@ const ExportPalettes = ({
   }, [targetRef, setOpen]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex justify-start items-start max-w-[400px] w-[400px]">
       <div
         onClick={handleCopyUrl}
-        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer w-[25%] m-2 p-5 rounded-xl justify-center text-center text-sm flex flex-col">
+        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer max-w-[25%] w-[25%] m-2 p-4 rounded-xl justify-center text-center text-sm flex flex-col">
         <OK className="w-[32px] mx-auto mt-[10px] mb-5" />
         <p className="uppercase font-medium">url</p>
       </div>
 
       <div
         onClick={exportPdfHandler}
-        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer w-[25%] m-2 p-5 rounded-xl justify-center text-center text-sm flex flex-col">
+        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer max-w-[25%] w-[25%] m-2 p-4 rounded-xl justify-center text-center text-sm flex flex-col">
         <FileText className="w-[32px] mx-auto mb-5 mt-[10px]" />
         <p className="uppercase font-medium">PDF</p>
       </div>
 
       <div
         onClick={handleExportImage}
-        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer w-[25%] m-2 p-5 rounded-xl justify-center text-center text-sm flex flex-col">
+        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer max-w-[25%] w-[25%] m-2 p-4 rounded-xl justify-center text-center text-sm flex flex-col">
         <FileImage className="w-[32px] mx-auto mb-5 mt-[10px]" />
         <p className="uppercase font-medium">Image</p>
       </div>
 
       <div
         onClick={handleExportSVG}
-        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer w-[25%] m-2 p-5 rounded-xl justify-center text-center text-sm flex flex-col">
+        className="bg-[#f7f7f8] hover:bg-stone-200 cursor-pointer max-w-[25%] w-[25%] m-2 p-4 rounded-xl justify-center text-center text-sm flex flex-col">
         <div className="w-[32px] mx-auto mb-5 mt-[10px]">
           <svg
             stroke="currentColor"
